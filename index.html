@@ -13,6 +13,7 @@
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/animate.css" rel="stylesheet">	
 	<link href="css/responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css" type="text/css" media="screen, print"/>
 
     <!--[if lt IE 9]>
 	    <script src="js/html5shiv.js"></script>
@@ -26,6 +27,10 @@
 </head><!--/head-->
 
 <body>
+<!-- Preloader -->
+<div id="preloader">
+	<div id="status">&nbsp;</div>
+</div>
 	<header id="header" role="banner">		
 		<div class="main-nav">
 			<div class="container">
@@ -735,7 +740,15 @@ He was the state general secretary of a political party started by IITians and e
     <script type="text/javascript" src="js/jquery.nav.js"></script>
 	<script src="js/myajax.js"></script>
     <script type="text/javascript" src="js/main.js"></script> 
-    
+    <script type="text/javascript">
+	//<![CDATA[
+		$(window).load(function() { // makes sure the whole site is loaded
+			$('#status').fadeOut(); // will first fade out the loading animation
+			$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+			$('body').delay(350).css({'overflow':'visible'});
+		})
+	//]]>
+</script> 
 
     
 </body>
