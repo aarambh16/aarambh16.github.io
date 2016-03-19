@@ -31,8 +31,35 @@
 </head>
 
 <body id="page-top" class="index">
-<div id="preloader">
-    <div id="status">&nbsp;</div>
+<style type="text/css">
+
+.load {
+  text-align:center; /* Align center inline elements */
+  font: 0/0 a;       /* Hide the characters like spaces */
+}
+
+.load:before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.load img {
+  vertical-align: middle;
+  display: inline-block;
+}
+.load img {
+    vertical-align: middle;
+    display: inline-block;
+    max-height: 100%;  /* <-- Set maximum height to 100% of its parent */
+    max-width: 100%;   /* <-- Set maximum width to 100% of its parent */
+    margin-top: 15%;
+}
+</style>
+<!--  Preloader -->
+<div class="img-responsive" id="preloader">
+    <div id="status" class="load" ><img  style="background-color:#fff;"class="ri" src="img/status.png"></div>
 </div>
 
     <!-- Navigation -->
@@ -244,8 +271,8 @@
     //<![CDATA[
         $(window).load(function() { // makes sure the whole site is loaded
             $('#status').fadeOut(); // will first fade out the loading animation
-            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-            $('body').delay(350).css({'overflow':'visible'});
+            $('#preloader').delay(250).fadeOut('slow'); // will fade out the white DIV that covers the website.
+            $('body').delay(250).css({'overflow':'visible'});
         })
     //]]>
 </script> 
