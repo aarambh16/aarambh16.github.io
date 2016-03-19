@@ -27,9 +27,35 @@
 </head><!--/head-->
 
 <body>
-<!-- Preloader -->
-<div id="preloader">
-	<div id="status">&nbsp;</div>
+<style type="text/css">
+
+.load {
+  text-align:center; /* Align center inline elements */
+  font: 0/0 a;       /* Hide the characters like spaces */
+}
+
+.load:before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.load img {
+  vertical-align: middle;
+  display: inline-block;
+}
+.load img {
+    vertical-align: middle;
+    display: inline-block;
+    max-height: 100%;  /* <-- Set maximum height to 100% of its parent */
+    max-width: 100%;   /* <-- Set maximum width to 100% of its parent */
+    margin-top: 15%;
+}
+</style>
+<!--  Preloader -->
+<div class="img-responsive" id="preloader">
+	<div id="status" class="load"><img class="ri" src="img/status.png"></div>
 </div>
 	<header id="header" role="banner">		
 		<div class="main-nav">
